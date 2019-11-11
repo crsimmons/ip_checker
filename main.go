@@ -14,7 +14,7 @@ import (
 
 var portsFlag = flag.String("ports", "443", "Comma separated list of ports to check")
 var fileFlag = flag.String("file", "", "The path to file to read IPs from")
-var failFlag = flag.Bool("show_failures", false, "Print output when connection attempt fails")
+var failFlag = flag.Bool("show_failures", false, "Print output when connection attempt fails (default false")
 
 func raw_connect(sem chan struct{}, wg *sync.WaitGroup, host string, ports []string, showFailures bool) {
 	defer wg.Done()
