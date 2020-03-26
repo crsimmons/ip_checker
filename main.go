@@ -69,5 +69,5 @@ func main() {
 	}
 
 	wg.Wait()
-	fmt.Println("Finished")
+	os.Stderr.WriteString("Finished\n")
 }
